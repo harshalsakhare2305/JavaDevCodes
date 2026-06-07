@@ -1,3 +1,5 @@
+package CoreJava;
+
 import java.util.Scanner;
 
 class  B{
@@ -23,7 +25,7 @@ class  B{
           System.out.println("Plz enter the non zero number for the denominator");
           throw e;
       }finally {
-          System.out.println("Exit from calc from the class B");
+          System.out.println("Exit from calc from the class CoreJava.B");
       }
 
         System.out.println("Exit from the outside the finally block code");

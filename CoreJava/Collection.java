@@ -1,7 +1,7 @@
+package CoreJava;
+
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.ListIterator;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Collection {
 
@@ -172,7 +172,7 @@ public class Collection {
          * Iterator
          * --------
          * -> Forward traversal only
-         * -> Works on all Collection classes
+         * -> Works on all CoreJava.Collection classes
          * -> Fail-Fast
          *
          * ListIterator

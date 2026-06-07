@@ -1,14 +1,14 @@
-/*
+package CoreJava;/*
 =========================================================
 JAVA OOP CONCEPTS NOTES
 =========================================================
 
 1. Inner Class
 -------------
-A class defined inside another class is called an Inner Class.
+CoreJava.A class defined inside another class is called an Inner Class.
 
 Example:
-class Person {
+class CoreJava.Person {
     class Phone {
     }
 }
@@ -29,7 +29,7 @@ It may contain:
 
 Example:
 
-abstract class A {
+abstract class CoreJava.A {
     abstract void show();
 }
 
@@ -70,12 +70,12 @@ Types of Interfaces
 
 4. Functional Interface
 ------------------------
-A functional interface contains exactly one abstract method.
+CoreJava.A functional interface contains exactly one abstract method.
 
 Example:
 
 @FunctionalInterface
-interface A {
+interface CoreJava.A {
     void show();
 }
 
@@ -93,11 +93,11 @@ default void disp() {
 
 6. Anonymous Inner Class
 -------------------------
-A class without a name used for one-time implementation.
+CoreJava.A class without a name used for one-time implementation.
 
 Example:
 
-A obj = new A() {
+CoreJava.A obj = new CoreJava.A() {
     public void show() {
         System.out.println("Implementation");
     }
@@ -111,7 +111,7 @@ Short way of implementing Functional Interfaces.
 
 Example:
 
-A obj = () -> System.out.println("Hello");
+CoreJava.A obj = () -> System.out.println("Hello");
 
 Only works with Functional Interfaces.
 
@@ -146,7 +146,7 @@ class Person {
     int age;
 
     public void show() {
-        System.out.println("Inside Person Class");
+        System.out.println("Inside CoreJava.Person Class");
     }
 
     // Inner Class
@@ -170,7 +170,7 @@ abstract class Vehicle {
     abstract void start();
 
     public void stop() {
-        System.out.println("Vehicle Stopped");
+        System.out.println("CoreJava.Vehicle Stopped");
     }
 }
 
@@ -179,13 +179,13 @@ class Car extends Vehicle {
 
     @Override
     void start() {
-        System.out.println("Car Started");
+        System.out.println("CoreJava.Car Started");
     }
 }
 
 
 // ------------------------------------------------------
-// Main Class
+// CoreJava.Main Class
 // ------------------------------------------------------
 public class Main {
 
