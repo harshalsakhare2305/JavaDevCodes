@@ -112,8 +112,8 @@ public class Generics {
          * variable type = String
          */
 
-        Check<String> c1 = new Check("String");
-        c1.disp();
+//        Check<String> c1 = new Check("String");
+//        c1.disp();
 
 
 
