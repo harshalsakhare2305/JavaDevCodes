@@ -2,6 +2,10 @@ package Multithreading;
 
 class Alpha extends  Thread{
 
+    /**
+     * run() method -> the entry point for the thread. When the thread is started, the run() method is invoked
+     **/
+
     @Override
     public void run() {
         disp();
@@ -42,6 +46,8 @@ public class ThreadCreation {
         System.out.println("Current Thread Executing is :"+Thread.currentThread().getName());
         System.out.println("Priority of the Current Threadd runnign is : "+ Thread.currentThread().getPriority());
 
+
+
         // We can chage the pririty of main thread and chnage its name as well
         Thread.currentThread().setName("Harshal");
         Thread.currentThread().setPriority(1);
@@ -59,6 +65,14 @@ public class ThreadCreation {
          /**
           * Begins the execution of the thread. The Java Virtual Machine (JVM) calls the run() method of the thread.
           * **/
+
+
+         /**
+          * sleep(long millis): Causes the currently executing thread to sleep (temporarily cease execution) for the specified number of milliseconds.
+          * **/
+
+         System.out.println("Main thread is sleeping for 5 sec.... Wait ...");
+         Thread.sleep(5000);
 
          a.setName("Alpha");
          b.setName("Beta");
