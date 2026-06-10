@@ -34,15 +34,15 @@ class Libray implements Runnable{
         }else{
             System.out.println("Studnet Pranav Entered the lib");
             try {
-                synchronized (firstbook){
-                    System.out.println("Student Pranav acquired the "+firstbook);
+                synchronized (thirdbook){
+                    System.out.println("Student Pranav acquired the "+thirdbook);
                     Thread.sleep(2000);
                     synchronized (secondbook){
                         System.out.println("Studnet Pranav aquired the "+ secondbook);
                         Thread.sleep(2000);
 
-                        synchronized (thirdbook){
-                            System.out.println("Student Pranav aquired the "+thirdbook);
+                        synchronized (firstbook){
+                            System.out.println("Student Pranav aquired the "+firstbook);
                             Thread.sleep(2000);
                         }
                     }
