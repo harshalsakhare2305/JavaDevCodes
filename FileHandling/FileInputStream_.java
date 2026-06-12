@@ -22,7 +22,8 @@ public class FileInputStream_ {
 
            int byteValue;   //returns byte value btw 0-255
 
-           while((byteValue=fis.read())!=-1) {
+           while((byteValue=fis.read())!=-1) {  // this is read the data byte by byte and then convert it int character
+               //but storing other primitive type would be complex using this for that we have DataInputStream
                System.out.println((char) byteValue);
            }
 
