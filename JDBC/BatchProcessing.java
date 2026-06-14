@@ -22,7 +22,9 @@ public class BatchProcessing {
 
         try {
             Connection con = DriverManager.getConnection(url,username,password);
-            Statement state =con.createStatement();
+         //   Statement state =con.createStatement();
+            String query = "INSERT INTO employees(id, name, salary, department_id) VALUES (?,?,?,?)";
+            PreparedStatement statement =con.prepareStatement(query);
 
 
 
@@ -37,9 +39,13 @@ public class BatchProcessing {
                 System.out.println("ENter the department id");
                 int deptId=sc.nextInt();
 
-                String query = String.format("INSERT INTO employees(id, name, salary, department_id) VALUES (%d,'%s',%d,%d)",id,name,salary,deptId);
+                statement.setInt(1,id);
+                statement.setString(2,name);
+                statement.setInt(3,salary);
+                statement.setInt(4,deptId);
 
-                state.addBatch(query);
+
+                statement.addBatch();
                 System.out.println("Do you want to enter more data (Y/N)");
                 String choice =sc.next();
                 if(choice.toUpperCase().equals("N")){
@@ -48,7 +54,7 @@ public class BatchProcessing {
 
             }
 
-            int[] arr = state.executeBatch();
+            int[] arr = statement.executeBatch();
 
            for(int i : arr){
                System.out.print(" "+ i + " ");
@@ -58,7 +64,7 @@ public class BatchProcessing {
 
 
         }catch (SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
     }
