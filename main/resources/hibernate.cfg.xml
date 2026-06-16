@@ -1,0 +1,40 @@
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:mysql://127.0.0.1:3306/Student
+        </property>
+
+        <property name="hibernate.connection.username">
+            root
+        </property>
+
+        <property name="hibernate.connection.password">
+            Harshal@2305
+        </property>
+
+
+        <!-- Hibernate Properties -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <!-- Schema Generation -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+
+
+        <mapping class="com.example.model.Student"/>
+
+
+
+    </session-factory>
+</hibernate-configuration>
