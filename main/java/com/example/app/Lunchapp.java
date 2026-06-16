@@ -15,14 +15,14 @@ public class Lunchapp {
         Configuration config =new Configuration();
         config.configure();
 
-        SessionFactory sessionFactory=config.buildSessionFactory();
+        SessionFactory sessionFactory=config.addAnnotatedClass(Student.class).buildSessionFactory();
 
         Session session = sessionFactory.openSession();
 
         Transaction transaction =session.beginTransaction();
 
         Student s1 = new Student();
-        s1.setId(UUID.randomUUID().toString());
+        s1.setId("1");
         s1.setName("Harshal");
         s1.setAge(22);
 

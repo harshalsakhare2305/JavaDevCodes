@@ -20,7 +20,16 @@ public class Student {
     private int age;
 
     public Student(){
+        System.out.println("THis is the constructor of the Student class");
+    }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 
     public void setAge(int age) {
