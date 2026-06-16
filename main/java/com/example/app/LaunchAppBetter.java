@@ -13,28 +13,53 @@ public class LaunchAppBetter {
 
     public static void main(String[] args) {
 
-        Configuration config=null;
-        SessionFactory sessionFactory=null;
-        Session session=null;
-        Transaction transaction=null;
-        Boolean flag=false;
+//        Configuration config=null;
+//        SessionFactory sessionFactory=null;
+//        Session session=null;
+//        Transaction transaction=null;
+//        Boolean flag=false;
+//
+//        config=new Configuration();
+//        config.configure();
+//
+//        sessionFactory=config.buildSessionFactory();
+//        session=sessionFactory.openSession();
 
-        config=new Configuration();
-        config.configure();
+          SessionFactory sessionFactory =new Configuration().configure().addAnnotatedClass(Student.class).buildSessionFactory();
 
-        sessionFactory=config.buildSessionFactory();
-        session=sessionFactory.openSession();
+          Session session=sessionFactory.openSession();
+          Transaction transaction=null;
+          boolean flag=false;
 
         try {
             transaction=session.beginTransaction();
 
             Student s1=new Student();
 
-            s1.setId(UUID.randomUUID().toString());
-            s1.setName("Pranav");
-            s1.setAge(23);
+            // Insertion Operation
 
-            session.persist(s1);
+//            s1.setId("2");
+//            s1.setName("Pranav");
+//            s1.setAge(23);
+
+            //session.persist(s1);
+
+            //Update Method
+
+        /*    s1.setId("2");
+            s1.setName("Pranjali");
+            s1.setAge(21);
+            session.merge(s1);
+            */
+
+
+            //Delete Operation
+            s1.setId("2");
+            s1.setName("Pranjali");
+            s1.setAge(21);
+
+
+            session.remove(s1);
             flag=true;
 
 

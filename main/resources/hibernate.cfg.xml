@@ -31,8 +31,7 @@
         <property name="hibernate.format_sql">true</property>
 
 
-
-        <mapping class="com.example.model.Student"/>
+<!--        <mapping class="com.example.model.Student"/>-->
 
 
 
