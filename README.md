@@ -1,4 +1,4 @@
-# ☕ JavaDevCodes
+# ☕ Core-Java
 
 > A comprehensive collection of **Core Java** concepts and backend development codes covering Multithreading, JDBC, Hibernate, File Handling, Debugging and more — written in **Java**.
 
